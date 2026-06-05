@@ -1,0 +1,27 @@
+system:
+  seed: 123
+  checkpoint_dir: "checkpoint/actual_model.keras"
+
+dataset:
+  path: "data"
+  train_val_dir: "data/train_val_set"
+  test_dir: "data/test_set"
+  img_height: 64
+  img_width: 64
+  batch_size: 32
+  validation_split: 0.2
+
+model: 
+  backbone: "EfficientNetB0"
+  num_clases: 15
+  dropout_rate: 0.3
+
+training:
+  epochs: 25
+  learning_rate: 0.0001
+  optimizer: "AdamW"
+
+  loss:
+    name: "Ff"
+    gamma: 0.2
+    alpha: 0.25
